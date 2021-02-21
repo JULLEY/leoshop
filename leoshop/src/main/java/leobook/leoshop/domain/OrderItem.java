@@ -1,5 +1,6 @@
 package leobook.leoshop.domain;
 
+import leobook.leoshop.domain.item.Item;
 import lombok.Getter;
 import lombok.Setter;
 
