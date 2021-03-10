@@ -14,7 +14,7 @@ public class MemberService {
     private MemberRepository memberRepository;
 
     /**
-     * 회원가입
+     * 회원가입(중복회원 검증포함)
      * @param member
      * @return
      */
