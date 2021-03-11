@@ -7,6 +7,9 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 회원 Entity
+ */
 @Entity
 @Getter @Setter
 public class Member {
