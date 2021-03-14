@@ -19,7 +19,7 @@ public class MemberService {
      * @return
      */
     public Long join(Member member){
-       validateDuplicateMember(member);    // 중복 회원 검증증
+       validateDuplicateMember(member);
        memberRepository.save(member);
        return member.getId();
     }
