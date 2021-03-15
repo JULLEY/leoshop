@@ -8,6 +8,9 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 카테고리 Entity
+ */
 @Entity
 @Getter @Setter
 public class Category {
