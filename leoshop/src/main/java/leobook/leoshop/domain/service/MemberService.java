@@ -10,12 +10,12 @@ import java.util.List;
 
 @Service
 @Transactional(readOnly = true)
+// @RequiredArgsConstructor 얘는 final이 있는것만 생성자를 만들어준다.
 @RequiredArgsConstructor
 public class MemberService {
 
     private final MemberRepository memberRepository;
 
-    // @RequiredArgsConstructor 얘는 final이 있는것만 생성자를 만들어준다.
     // @AllArgsConstructor 이 어노테이션이 생성자를 만들어준다
     //public MemberService(MemberRepository memberRepository) {
     //    this.memberRepository = memberRepository;
