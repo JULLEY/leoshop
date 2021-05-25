@@ -2,22 +2,31 @@ package leobook.leoshop.domain.service;
 
 import leobook.leoshop.domain.Member;
 import leobook.leoshop.domain.repository.MemberRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Service
+@Transactional(readOnly = true)
+@RequiredArgsConstructor
 public class MemberService {
 
-    @Autowired
-    private MemberRepository memberRepository;
+    private final MemberRepository memberRepository;
+
+    // @RequiredArgsConstructor 얘는 final이 있는것만 생성자를 만들어준다.
+    // @AllArgsConstructor 이 어노테이션이 생성자를 만들어준다
+    //public MemberService(MemberRepository memberRepository) {
+    //    this.memberRepository = memberRepository;
+    //}
 
     /**
      * 회원가입
      * @param member
      * @return
      */
+    @Transactional
     public Long join(Member member){
        validateDuplicateMember(member);
        memberRepository.save(member);

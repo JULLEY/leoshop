@@ -1,6 +1,7 @@
 package leobook.leoshop.domain.repository;
 
 import leobook.leoshop.domain.Member;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
@@ -11,9 +12,9 @@ import java.util.List;
  * 회원 repository
  */
 @Repository
+@RequiredArgsConstructor
 public class MemberRepository {
 
-    @PersistenceContext
     private EntityManager em;
 
     public void save(Member member){
