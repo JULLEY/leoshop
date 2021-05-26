@@ -25,7 +25,7 @@ public class MemberServiceTest {
     public void joinMember() throws Exception {
         //Given
         Member member = new Member();
-        member.setName("kim");
+        member.setName("jieun");
         //When
         Long saveId = memberService.join(member);
         //Then
