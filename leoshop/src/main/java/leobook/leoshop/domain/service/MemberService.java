@@ -10,8 +10,7 @@ import java.util.List;
 
 @Service
 @Transactional(readOnly = true)
-// @RequiredArgsConstructor 얘는 final이 있는것만 생성자를 만들어준다.
-@RequiredArgsConstructor
+@RequiredArgsConstructor // @RequiredArgsConstructor 얘는 final이 있는것만 생성자를 만들어준다.
 public class MemberService {
 
     private final MemberRepository memberRepository;
