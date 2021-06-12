@@ -6,6 +6,9 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
+/**
+ * orderItem
+ */
 @Entity
 @Table(name = "order_item")
 @Getter @Setter
